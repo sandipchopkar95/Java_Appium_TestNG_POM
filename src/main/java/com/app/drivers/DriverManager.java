@@ -21,8 +21,7 @@ public class DriverManager {
         logger.info("SETUP : Entered Device Capability name is : {}", capabilityName);
         try {
             AppiumDriver appiumDriver = new AppiumDriver(service.get(),
-                    CapabilityReader.getDesiredCapabilities(capabilityName, "./src/main/resources/config/DeviceConfig.json")
-            );
+                    CapabilityReader.getDesiredCapabilities(capabilityName, "./src/main/resources/config/DeviceConfig.json"));
             appiumDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
             driver.set(appiumDriver);
             logger.info("SETUP : Connected to Appium Server, Launching Application. . .");
@@ -40,7 +39,7 @@ public class DriverManager {
         }
     }
 
-    public static void closeService(){
+    public static void closeService() {
         if (service.get() != null && service.get().isRunning()) {
             service.get().stop();
             logger.info("TEAR-DOWN : Appium service stopped.");

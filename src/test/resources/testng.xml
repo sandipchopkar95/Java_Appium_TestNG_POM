@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 
-<suite name="ParallelAppiumTestSuite" parallel="tests" thread-count="2">
+<suite name="" parallel="tests" thread-count="2">
     <test name="SamsungZFlipTest">
         <parameter name="capabilityName" value="Samsung zFlip" />
         <classes>
-            <class name="com.app.tests.SampleTest" />
+            <class name="com.app.tests.ProductPageTest" />
         </classes>
     </test>
 </suite>
