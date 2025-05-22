@@ -57,8 +57,8 @@ project-root/
 
 ```bash
 # 1. Clone the repository
-git clone <your-repo-url>
-cd <your-project-folder>
+git clone https://github.com/sandipchopkar95/Java_Appium_TestNG_POM_DemoApp.git
+cd Java_Appium
 
 # 2. Install Maven dependencies
 mvn clean install
