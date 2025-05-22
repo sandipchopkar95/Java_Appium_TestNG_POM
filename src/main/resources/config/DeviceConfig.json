@@ -1,0 +1,14 @@
+[
+  {
+    "name": "MyDevice",
+    "caps": {
+      "platformName": "Android",
+      "appium:automationName": "UiAutomator2",
+      "appium:deviceName": "Emulator",
+      "appium:platformVersion": "12.0",
+      "appium:app": "/appfiles/saucelab.apk",
+      "appium:autoGrantPermissions": true,
+      "appium:autoAcceptAlerts": true
+    }
+  }
+]
