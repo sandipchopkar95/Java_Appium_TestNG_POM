@@ -35,7 +35,6 @@ public class DriverManager {
         if (driver.get() != null) {
             driver.get().quit();
             logger.info("TEAR-DOWN : Driver quit successfully.");
-            driver.remove();
         }
     }
 

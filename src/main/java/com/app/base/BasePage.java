@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.List;
 
 public class BasePage {
 
@@ -48,6 +49,21 @@ public class BasePage {
             return text;
         } catch (RuntimeException e) {
             logger.error("ERROR : Exception while getting text from element: {}", getElementDescription(element), e);
+            throw e;
+        }
+    }
+
+    public String waitAndGetFirstTextFromList(List<WebElement> element) {
+        try {
+            WebDriverWait wait = new WebDriverWait(driver, DEFAULT_WAIT);
+            logger.info("ACTION : Waiting for element to be visible: {}", getElementDescription(element.get(0)));
+            wait.until(ExpectedConditions.visibilityOf(element.get(0)));
+            logger.info("ACTION : Element is visible: {}", getElementDescription(element.get(0)));
+            String text = element.get(0).getText();
+            logger.info("ACTION : Captured text: {}", text);
+            return text;
+        } catch (RuntimeException e) {
+            logger.error("ERROR : Exception while getting text from element: {}", getElementDescription(element.get(0)), e);
             throw e;
         }
     }

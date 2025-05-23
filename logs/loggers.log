@@ -1,0 +1,29 @@
+19:04:00 [TestNG-tests-1] INFO  com.app.drivers.DriverManager - SETUP : Entered Device Capability name is : MyDevice
+19:04:16 [TestNG-tests-1] INFO  com.app.drivers.DriverManager - SETUP : Connected to Appium Server, Launching Application. . .
+19:04:18 [TestNG-tests-1] INFO  com.app.base.BasePage - ACTION : Waiting for 2 seconds
+19:04:18 [TestNG-tests-1] INFO  com.app.base.BasePage - ACTION : The Element is Displayed: Located by By.chained({By.xpath: //android.view.ViewGroup[@content-desc='cart badge']/android.widget.ImageView}) | Text: 
+19:04:18 [TestNG-tests-1] INFO  com.app.base.BasePage - ACTION : Waiting for 2 seconds
+19:04:20 [TestNG-tests-1] INFO  com.app.base.BasePage - ACTION : The Element is Displayed: Located by By.chained({By.xpath: //android.view.ViewGroup[@content-desc='open menu']/android.widget.ImageView}) | Text: 
+19:04:20 [TestNG-tests-1] INFO  com.app.base.BasePage - ACTION : Waiting for element to be visible: Located by By.chained({By.xpath: //android.view.ViewGroup[@content-desc='container header']/android.widget.TextView}) | Text: Products
+19:04:20 [TestNG-tests-1] INFO  com.app.base.BasePage - ACTION : Element is visible: Located by By.chained({By.xpath: //android.view.ViewGroup[@content-desc='container header']/android.widget.TextView}) | Text: Products
+19:04:21 [TestNG-tests-1] INFO  com.app.base.BasePage - ACTION : Captured text: Products
+19:04:21 [TestNG-tests-1] INFO  com.app.base.BasePage - ACTION : Waiting for 2 seconds
+19:04:21 [TestNG-tests-1] INFO  com.app.base.BasePage - ACTION : The Element is Displayed: Located by By.chained({By.xpath: //android.view.ViewGroup[@content-desc='sort button']/android.widget.ImageView}) | Text: 
+19:04:21 [TestNG-tests-1] INFO  com.app.drivers.DriverManager - TEAR-DOWN : Appium service stopped.
+19:34:56 [main] INFO  com.app.drivers.DriverManager - SETUP : Entered Device Capability name is : MyDevice
+19:35:13 [main] INFO  com.app.drivers.DriverManager - SETUP : Connected to Appium Server, Launching Application. . .
+19:35:15 [main] INFO  com.app.base.BasePage - ACTION : Waiting for 2 seconds
+19:35:16 [main] INFO  com.app.base.BasePage - ACTION : The Element is Displayed: Located by By.chained({By.xpath: //android.view.ViewGroup[@content-desc='cart badge']/android.widget.ImageView}) | Text: 
+19:35:16 [main] INFO  com.app.base.BasePage - ACTION : Waiting for 2 seconds
+19:35:16 [main] INFO  com.app.base.BasePage - ACTION : The Element is Displayed: Located by By.chained({By.xpath: //android.view.ViewGroup[@content-desc='open menu']/android.widget.ImageView}) | Text: 
+19:35:17 [main] INFO  com.app.base.BasePage - ACTION : Waiting for element to be visible: Located by By.chained({By.xpath: //android.view.ViewGroup[@content-desc='container header']/android.widget.TextView}) | Text: Products
+19:35:17 [main] INFO  com.app.base.BasePage - ACTION : Element is visible: Located by By.chained({By.xpath: //android.view.ViewGroup[@content-desc='container header']/android.widget.TextView}) | Text: Products
+19:35:18 [main] INFO  com.app.base.BasePage - ACTION : Captured text: Products
+19:35:18 [main] INFO  com.app.base.BasePage - ACTION : Waiting for element to be visible: [[AppiumDriver:  on ANDROID (53c04ebc-3924-4892-94eb-d3ad6f5bc39f)] -> xpath: //android.widget.TextView[@content-desc='store item text']] | Text: Sauce Labs Backpack
+19:35:19 [main] INFO  com.app.base.BasePage - ACTION : Element is visible: [[AppiumDriver:  on ANDROID (53c04ebc-3924-4892-94eb-d3ad6f5bc39f)] -> xpath: //android.widget.TextView[@content-desc='store item text']] | Text: Sauce Labs Backpack
+19:35:19 [main] INFO  com.app.base.BasePage - ACTION : Captured text: Sauce Labs Backpack
+19:35:20 [main] INFO  com.app.base.BasePage - ACTION : Waiting for 2 seconds
+19:35:20 [main] INFO  com.app.base.BasePage - ACTION : The Element is Displayed: [[AppiumDriver:  on ANDROID (53c04ebc-3924-4892-94eb-d3ad6f5bc39f)] -> xpath: //android.view.ViewGroup[@content-desc='store item' and .//android.widget.TextView[@text='Sauce Labs Backpack']]//android.widget.TextView[@content-desc='store item price']] | Text: $29.99
+19:35:20 [main] INFO  com.app.base.BasePage - ACTION : Waiting for 2 seconds
+19:35:20 [main] INFO  com.app.base.BasePage - ACTION : The Element is Displayed: Located by By.chained({By.xpath: //android.view.ViewGroup[@content-desc='sort button']/android.widget.ImageView}) | Text: 
+19:35:20 [main] INFO  com.app.drivers.DriverManager - TEAR-DOWN : Appium service stopped.

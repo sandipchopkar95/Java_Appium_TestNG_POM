@@ -13,15 +13,15 @@ public class BaseTest {
         DriverManager.startAppiumService();
     }
 
-    @BeforeMethod
+    @BeforeClass
     public void launchApplication() throws Exception {
         driver = DriverManager.setUpApplication();
     }
 
-    @AfterMethod
-    public void closeApp() {
-        DriverManager.closeApplication();
-    }
+//    @AfterMethod
+//    public void closeApp() {
+//        DriverManager.closeApplication();
+//    }
 
     @AfterTest
     public void closeAppiumService(){

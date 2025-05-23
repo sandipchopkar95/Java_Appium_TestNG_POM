@@ -7,31 +7,37 @@ import org.jetbrains.annotations.NotNull;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
+import java.util.List;
+
 public class ProductsPage extends CommonPage {
 
     public ProductsPage(AppiumDriver driver) {
         super(driver);
     }
 
+    @AndroidFindBy(xpath = "//android.widget.TextView[@content-desc='store item text']")
+    @iOSXCUITFindBy(xpath = "")
+    private List<WebElement> productNames;
+
     @NotNull
-    private WebElement getElementProductName(String productName){
-        return driver.findElement(By.xpath("//android.widget.TextView[@content-desc='store item text' and @text='"+productName+"']"));
+    private WebElement getElementProductName(String productName) {
+        return driver.findElement(By.xpath("//android.widget.TextView[@content-desc='store item text' and @text='" + productName + "']"));
     }
 
     @NotNull
-    private WebElement getElementProduct(String productName){
-        return driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc='store item' and .//android.widget.TextView[@text='"+productName+"']]"));
+    private WebElement getElementProduct(String productName) {
+        return driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc='store item' and .//android.widget.TextView[@text='" + productName + "']]"));
     }
 
     @NotNull
-    private WebElement getElementRatingStar(String productName, int ratingInInt){
+    private WebElement getElementRatingStar(String productName, int ratingInInt) {
         String rating = String.valueOf(ratingInInt);
-        return driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc='store item' and .//android.widget.TextView[contains(@text, '"+productName+"')]]//android.view.ViewGroup[@content-desc='review star "+rating+"']"));
+        return driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc='store item' and .//android.widget.TextView[contains(@text, '" + productName + "')]]//android.view.ViewGroup[@content-desc='review star " + rating + "']"));
     }
 
     @NotNull
-    private WebElement getElementProductPrice(String productName){
-        return driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc='store item' and .//android.widget.TextView[@text='"+ productName + "']]//android.widget.TextView[@content-desc='store item price']"));
+    private WebElement getElementProductPrice(String productName) {
+        return driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc='store item' and .//android.widget.TextView[@text='" + productName + "']]//android.widget.TextView[@content-desc='store item price']"));
     }
 
     @AndroidFindBy(xpath = "//android.view.ViewGroup[@content-desc='cart badge']/android.widget.ImageView")
@@ -46,16 +52,24 @@ public class ProductsPage extends CommonPage {
     @iOSXCUITFindBy(xpath = "")
     private WebElement button_Sort;
 
-    public boolean isCartIconButtonAvailable(){
+    public boolean isCartIconButtonAvailable() {
         return waitAndCheckVisibilityOfElement(button_CartIcon);
     }
 
-    public boolean isOpenMenuButtonAvailable(){
+    public boolean isOpenMenuButtonAvailable() {
         return waitAndCheckVisibilityOfElement(button_OpenMenu);
     }
 
-    public boolean isSortButtonAvailable(){
+    public boolean isSortButtonAvailable() {
         return waitAndCheckVisibilityOfElement(button_Sort);
+    }
+
+    public String getFirstProductName() {
+        return waitAndGetFirstTextFromList(productNames);
+    }
+
+    public boolean checkProductPriceAvailableForProduct(String productName){
+        return waitAndCheckVisibilityOfElement(getElementProductPrice(productName));
     }
 
 }
